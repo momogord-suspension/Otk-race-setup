@@ -1,0 +1,10 @@
+{
+  "name": "OTK Mini 60 Setup Manager",
+  "short_name": "OTK Setup",
+  "description": "Fiches de réglage Tony Kart Rookie Mini 60",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#071426",
+  "theme_color": "#075da5",
+  "icons": [{ "src": "icon-192.png", "sizes": "192x192", "type": "image/png" }]
+}
