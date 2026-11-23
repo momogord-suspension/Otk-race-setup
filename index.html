@@ -3,21 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#075da5">
-<meta name="description" content="Gestion des réglages du Tony Kart Rookie Mini 60 — V14.">
-<link rel="icon" type="image/svg+xml" href="favicon.svg">
-<link rel="apple-touch-icon" href="icon-192.png">
-<link rel="manifest" href="manifest.webmanifest">
-<title>OTK Mini 60 Setup Manager — V14</title>
+<title>OTK Mini 60 Setup Pro - V13</title>
 <style>
   :root {
-    --otk-green: #0876c9;
-    --otk-dark: #071426;
-    --otk-panel: #10243b;
-    --otk-border: #294765;
+    --otk-green: #008744;
+    --otk-dark: #0f172a;
+    --otk-panel: #1e293b;
+    --otk-border: #334155;
     --otk-text: #f8fafc;
     --otk-muted: #94a3b8;
-    --otk-accent: #f5c400;
+    --otk-accent: #22c55e;
     --otk-warn: #f59e0b;
     --otk-danger: #ef4444;
     --otk-info: #38bdf8;
@@ -25,17 +20,13 @@
   * { box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
   body { margin: 0; background: var(--otk-dark); color: var(--otk-text); line-height: 1.5; }
   header {
-    background: linear-gradient(112deg, #06172b 0%, #075da5 58%, #09213a 100%);
-    border-bottom: 4px solid #f5c400; box-shadow: 0 5px 22px rgba(0,0,0,.28);
+    background: linear-gradient(135deg, #052e16 0%, #0f172a 100%);
+    border-bottom: 2px solid var(--otk-green);
     padding: 1rem 1.5rem;
     display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem;
   }
-  .brand-lockup { display:flex; align-items:center; gap:0.85rem; }
-  .brand-mark { width:58px; height:58px; flex:0 0 58px; filter: drop-shadow(0 3px 5px rgba(0,0,0,.35)); }
-  .brand-mark svg { width:100%; height:100%; display:block; }
   header h1 { margin: 0; font-size: 1.35rem; letter-spacing: 0.5px; display: flex; align-items: center; gap: 0.6rem; }
   .badge { background: var(--otk-green); color: #fff; font-size: 0.72rem; padding: 0.2rem 0.55rem; border-radius: 999px; font-weight: 700; text-transform: uppercase; }
-  @media (max-width:600px) { header { padding:0.85rem 1rem; } .brand-mark { width:46px; height:46px; flex-basis:46px; } header h1 { font-size:1.05rem; } }
   nav {
     display: flex; gap: 0.4rem; background: #090d16; padding: 0.5rem 1.5rem; overflow-x: auto; border-bottom: 1px solid var(--otk-border);
   }
@@ -44,7 +35,7 @@
     padding: 0.55rem 1rem; border-radius: 6px; cursor: pointer; font-weight: 600; white-space: nowrap; transition: all 0.15s;
   }
   nav button:hover { color: #fff; background: rgba(255,255,255,0.05); }
-  nav button.active { background: var(--otk-green); color: #fff; border-color:#f5c400; box-shadow: inset 0 -2px 0 #f5c400; }
+  nav button.active { background: var(--otk-green); color: #fff; }
   main { max-width: 1280px; margin: 0 auto; padding: 1.5rem; }
   .tab { display: none; }
   .tab.active { display: block; }
@@ -73,7 +64,7 @@
   th { background: #0f172a; color: var(--otk-accent); font-weight: 700; }
   tr:nth-child(even) td { background: rgba(15, 23, 42, 0.45); }
   .pill { display: inline-block; padding: 0.15rem 0.5rem; border-radius: 4px; font-size: 0.78rem; font-weight: 700; }
-  .pill-green { background: rgba(245, 196, 0, 0.16); color: #ffe066; border: 1px solid rgba(245, 196, 0, 0.45); }
+  .pill-green { background: rgba(34, 197, 94, 0.2); color: #4ade80; border: 1px solid rgba(34, 197, 94, 0.4); }
   .pill-warn { background: rgba(245, 158, 11, 0.2); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.4); }
   .pill-danger { background: rgba(239, 68, 68, 0.2); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.4); }
   .pill-info { background: rgba(56, 189, 248, 0.2); color: #7dd3fc; border: 1px solid rgba(56, 189, 248, 0.4); }
@@ -99,7 +90,7 @@
   .eccentric-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:0.8rem; }
   .eccentric-layout { display:grid; gap:.65rem; }
   .eccentric-front { display:flex; align-items:center; justify-content:center; gap:.55rem; color:#e2e8f0; font-weight:800; letter-spacing:.06em; }
-  .front-arrow { color:#f5c400; font-size:2.1rem; line-height:1; }
+  .front-arrow { color:#22c55e; font-size:2.1rem; line-height:1; }
   .eccentric-row { display:grid; grid-template-columns:1fr; align-items:center; background:#172235; border:1px solid var(--otk-border); border-radius:8px; padding:.6rem; }
   .eccentric-row-title { text-align:center; font-weight:800; font-size:.9rem; color:#cbd5e1; letter-spacing:.04em; }
   .eccentric-pair-graphic { width:100%; max-width:520px; margin:.2rem auto; }
@@ -110,10 +101,10 @@
   .eccentric-graphic { width:100%; max-width:230px; margin:0.25rem auto; }
   .eccentric-graphic svg { display:block; width:100%; height:auto; }
   .eccentric-hole { cursor:pointer; fill:#64748b; stroke:#cbd5e1; stroke-width:1.5; }
-  .eccentric-hole.selected { fill:#f5c400; stroke:#fff3b0; stroke-width:2.5; }
+  .eccentric-hole.selected { fill:#22c55e; stroke:#dcfce7; stroke-width:2.5; }
   .eccentric-controls { display:flex; justify-content:center; align-items:center; gap:0.8rem; margin-top:0.35rem; }
   .eccentric-controls .btn { padding:0.35rem 0.8rem; }
-  .eccentric-summary { margin:0.8rem 0; padding:0.7rem; border:1px solid rgba(245,196,0,.5); border-radius:6px; color:#ffe066; text-align:center; font-weight:700; }
+  .eccentric-summary { margin:0.8rem 0; padding:0.7rem; border:1px solid rgba(34,197,94,.45); border-radius:6px; color:#86efac; text-align:center; font-weight:700; }
   .eccentric-result { display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:.65rem; margin-top:.65rem; }
   .eccentric-result > div { background:#172235; border:1px solid var(--otk-border); border-radius:7px; padding:.65rem; text-align:center; }
   .eccentric-result strong { display:block; color:#fff; font-size:1.02rem; }
@@ -136,22 +127,9 @@
 <body>
 
 <header>
-  <div class="brand-lockup">
-    <div class="brand-mark" aria-hidden="true">
-      <svg viewBox="0 0 72 72" role="img" aria-label="Emblème karting">
-        <path d="M36 3 65 14v21c0 17-11 27-29 34C18 62 7 52 7 35V14Z" fill="#071426" stroke="#f5c400" stroke-width="3"/>
-        <path d="M17 43h38l-5-10H25z" fill="#0876c9" stroke="#fff" stroke-width="2"/>
-        <circle cx="25" cy="48" r="5" fill="#f5c400" stroke="#fff" stroke-width="1.5"/>
-        <circle cx="48" cy="48" r="5" fill="#f5c400" stroke="#fff" stroke-width="1.5"/>
-        <path d="M27 30h18l5 8H22z" fill="#fff"/>
-        <path d="M31 27h10l4 7H27z" fill="#f5c400"/>
-        <path d="M13 19h46" stroke="#0876c9" stroke-width="4"/>
-      </svg>
-    </div>
-    <div>
-      <h1>OTK Mini 60 Setup Manager <span class="badge">Rookie EVM • Noesis R</span></h1>
-      <div style="font-size:0.8rem; color:#d6e8f7; margin-top:0.2rem;">V14 · Rookie Mini EVM 2024 · Manuel OTK adapté au Mini 60 (arbres Ø30 U/N/O/H/A)</div>
-    </div>
+  <div>
+    <h1>🏁 OTK Mini 60 Setup Manager <span class="badge">Rookie EVM • Noesis R</span></h1>
+    <div style="font-size:0.8rem; color:var(--otk-muted); margin-top:0.2rem;">V14 · Rookie Mini EVM 2024 · Manuel OTK adapté au Mini 60 (arbres Ø30 U/N/O/H/A)</div>
   </div>
   <div class="no-print" style="display:flex; gap:0.5rem; flex-wrap:wrap;">
     <button class="btn btn-secondary" onclick="loadDryBase()">☀️ Charger Base Sec OTK</button>
@@ -165,6 +143,7 @@
   <button onclick="switchTab('tab-diag', this)">🔧 Diagnostic & Symptômes</button>
   <button onclick="switchTab('tab-tableau', this)">📊 Tableau Officiel OTK (Sens de réglage)</button>
   <button onclick="switchTab('tab-ref', this)">📘 Référentiel Manuel OTK (Baquet, Jantes, Lest, Arbres)</button>
+  <button onclick="switchTab('tab-sniper', this)">🎯 Sniper V2 · Carrossage en degrés</button>
   <button onclick="switchTab('tab-saved', this)">💾 Fiches Sauvegardées (<span id="saved-count">0</span>)</button>
 </nav>
 
@@ -649,6 +628,43 @@
     </div>
   </div>
 
+  <!-- TAB SNIPER V2 -->
+  <div id="tab-sniper" class="tab">
+    <div class="card">
+      <h2>🎯 Sniper V2 Inox — Comprendre le carrossage</h2>
+      <div class="alert-box alert-warn">
+        <strong>Lecture officielle du Sniper V2 :</strong><br>
+        • 1 ligne complète = 2 mm de carrossage par côté.<br>
+        • Le point intermédiaire = 1 mm par côté.<br>
+        • Lire chaque laser sur la grille opposée. Additionner les valeurs gauche et droite pour obtenir le total du train avant.<br>
+        • Le parallélisme se lit sur l'axe perpendiculaire.
+      </div>
+      <p>Le Sniper affiche un déplacement en millimètres, pas directement un angle. Pour convertir en degrés, il faut connaître le diamètre de référence sur lequel le déplacement est défini. Sur cette page, le calcul est présenté comme un écart haut/bas rapporté au diamètre de la jante : <strong>angle = arctan(mm / diamètre)</strong>.</p>
+      <div class="grid-2">
+        <div>
+          <label for="sniperRimDiameter">Diamètre de référence de la jante (mm)</label>
+          <input type="number" id="sniperRimDiameter" min="50" max="300" step="0.1" value="127" oninput="updateSniperTable()">
+          <small>127 mm correspond au diamètre nominal de portée 5 pouces, pas nécessairement au diamètre extérieur réel de la jante. Mesure la dimension correspondant à la référence de carrossage pour affiner.</small>
+        </div>
+        <div>
+          <label>Type de pneu monté</label>
+          <input type="text" value="Vega Cadetti avant · 10 × 4.00-5" readonly>
+          <small>Le diamètre extérieur du pneu (environ 252 mm selon la fiche Vega) n'est pas utilisé dans ce calcul provisoire.</small>
+        </div>
+      </div>
+      <h3>Correspondance millimètres → degrés</h3>
+      <div style="overflow-x:auto">
+        <table>
+          <thead><tr><th>Lecture</th><th>Déplacement par côté</th><th>Angle par côté</th><th>Total si les 2 côtés identiques</th></tr></thead>
+          <tbody id="sniperConversionRows"></tbody>
+        </table>
+      </div>
+      <div class="alert-box alert-info" style="margin-top:1rem">
+        <strong>Important — calibration à confirmer :</strong> la notice confirme les 2 mm par ligne et 1 mm par point, mais ne donne pas une conversion universelle en degrés. Le diamètre de 127 mm est une base nominale de jante 5 pouces. Avant d'utiliser ces degrés pour déduire la position neutre des excentriques OTK, il faut confirmer le diamètre de référence réellement utilisé par la mesure du Sniper. Le tableau se recalcule automatiquement si tu modifies le diamètre.
+      </div>
+    </div>
+  </div>
+
   <!-- TAB 5: FICHES SAUVEGARDEES -->
   <div id="tab-saved" class="tab">
     <div class="card">
@@ -759,6 +775,21 @@ function renderEccentrics() {
     const offset = (eccentricState[which] - neutralPos + ECCENTRIC_POSITIONS) % ECCENTRIC_POSITIONS;
     document.getElementById(which === 'top' ? 'eccentricTopValue' : 'eccentricBottomValue').textContent = `${eccentricState[which]+1} / 20 (Δ ${offset > 10 ? offset-20 : offset} trous)`;
   });
+}
+
+function updateSniperTable() {
+  const input = document.getElementById('sniperRimDiameter');
+  const diameter = Number(input && input.value);
+  const body = document.getElementById('sniperConversionRows');
+  if (!body) return;
+  if (!Number.isFinite(diameter) || diameter <= 0) { body.innerHTML = '<tr><td colspan="4">Saisir un diamètre valide.</td></tr>'; return; }
+  body.innerHTML = Array.from({length: 7}, (_, i) => {
+    const mm = i;
+    const deg = Math.atan(mm / diameter) * 180 / Math.PI;
+    const total = 2 * deg;
+    const label = mm === 0 ? 'Centre' : (mm % 2 === 0 ? `${mm/2} graduation${mm===2?'':'s'}` : `${mm} point${mm===1?'':'s'}`);
+    return `<tr><td>${label}</td><td>${mm} mm</td><td>${deg.toFixed(3)}°</td><td>${total.toFixed(3)}°</td></tr>`;
+  }).join('');
 }
 
 function switchTab(tabId, btn) {
@@ -1051,6 +1082,7 @@ initializeDateTime();
 runDiagnostic();
 setEccentricPositions(ECCENTRIC_NEUTRAL.top, ECCENTRIC_NEUTRAL.bottom);
 renderSaved();
+document.addEventListener("DOMContentLoaded", updateSniperTable);
 </script>
 </body>
 </html>
